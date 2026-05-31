@@ -15,14 +15,14 @@ public class ProgramaProduto {
 
             if (escolhaPainel == 1) {
                 try {
-                    System.out.println("Digite o nome do dcx.ufpb.tercio.produto.Produto: ");
+                    System.out.println("Digite o nome do Produto: ");
                     String nomeProduto = sc.nextLine();
                     sc.nextLine();
 
-                    System.out.println("Digite o Preço do dcx.ufpb.tercio.produto.Produto: ");
+                    System.out.println("Digite o Preço do Produto: ");
                     double precoProduto = sc.nextDouble();
 
-                    System.out.println("Digite o Estoque do dcx.ufpb.tercio.produto.Produto: ");
+                    System.out.println("Digite o Estoque do Produto: ");
                     int estoqueProduto = sc.nextInt();
 
                     Produto novoProduto = new Produto(nomeProduto, precoProduto, estoqueProduto);
