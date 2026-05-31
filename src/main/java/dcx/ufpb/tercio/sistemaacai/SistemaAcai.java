@@ -13,10 +13,6 @@ public class SistemaAcai implements AcaiInterface {
         this.gravador = new AcaiGravador();
     }
 
-    public void adicionarNovoProdutoNaLista(AcaiProdutos novoProduto) {
-        this.mapaProdutos.put(novoProduto.getIdDoCliente(), novoProduto);
-    }
-
     public void cadastrarNovoPedido(String nomeCliente, String idCliente, String funcionario, String categoria, String produto, double preco, int quantidade) {
         AcaiProdutos cadastrarNovo = new AcaiProdutos(nomeCliente, idCliente, funcionario, categoria, produto, preco, quantidade);
 
