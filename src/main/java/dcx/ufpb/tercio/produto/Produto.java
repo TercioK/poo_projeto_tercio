@@ -12,7 +12,7 @@ public class Produto {
     }
 
     public String toString(){
-        return "Nome do dcx.ufpb.tercio.produto.Produto: " + nome + " com o Preço de R$ " + preco;
+        return "Produto: " + nome + " com o Preço de R$ " + preco;
     }
 
     public String getNome() {
