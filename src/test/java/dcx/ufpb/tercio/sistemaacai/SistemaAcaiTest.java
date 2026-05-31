@@ -13,11 +13,19 @@ public class SistemaAcaiTest {
     }
 
     @Test
+    public void testCadastrarDado() {
+        sistema.cadastrarNovoPedido("Kauan", "123", "Tercio", "Copos", "Açai 600ml", 20, 1);
+        AcaiProdutos pedido = sistema.pegarTodosProdutosCom("Açai 600ml");
+
+        assertEquals("Kauan", pedido.getNomeDoCliente(), "O nome do cliente deveria ser Kauan.");
+    }
+
+    @Test
     public void testCadastrarNovoPedidoEBuscar() {
         sistema.cadastrarNovoPedido("Natan", "123", "Tercio", "Copos", "Açai 500ml", 18.50, 2);
         AcaiProdutos produtoRecuperado = sistema.pegarTodosProdutosCom("Açai 500ml");
 
-        assertEquals("Natan", produtoRecuperado.getNomeDoCliente(), "O nome do cliente deve ser Ayla.");
+        assertEquals("Natan", produtoRecuperado.getNomeDoCliente(), "O nome do cliente deve ser Natan.");
         assertEquals("123", produtoRecuperado.getIdDoCliente(), "O ID do cliente deve ser 123.");
         assertEquals("Açai 500ml", produtoRecuperado.getProdutoEscolhido(), "O produto deve ser Açai 500ml.");
         assertEquals(18.50, produtoRecuperado.getPrecoDoProduto(), 0.001, "O preço deve ser 18.50.");
