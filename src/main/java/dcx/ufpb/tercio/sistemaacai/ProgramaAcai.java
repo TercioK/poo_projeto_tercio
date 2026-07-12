@@ -70,12 +70,12 @@ public class ProgramaAcai {
                 System.out.println("=== [LISTANDO TODOS OS PRODUTOS] ====");
                 sistema.listarTodosProdutoLista();
             } else if (menuEscolhas.equals("4")) {
-                System.out.println("Digite o nome do produto que deseja remover:");
+                System.out.println("Digite o nome do produto:");
                 String perguntaNome = sc.nextLine();
 
                 sistema.pegarTodosProdutosCom(perguntaNome);
             } else if (menuEscolhas.equals("5")) {
-                System.out.println("Digite o nome do produto que deseja remover:");
+                System.out.println("Digite o nome do cliente:");
                 String perguntaNomeCliente = sc.nextLine();
 
                 sistema.listarProdutosComNomeCliente(perguntaNomeCliente);

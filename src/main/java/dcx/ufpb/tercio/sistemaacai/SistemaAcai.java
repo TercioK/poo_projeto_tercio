@@ -52,7 +52,7 @@ public class SistemaAcai implements AcaiInterface {
         }
     }
 
-    public AcaiProdutos pegarTodosProdutosCom(String nome) {
+    public AcaiProdutos pegarTodosProdutosCom(String nome) throws SemProdutosException {
         if (mapaProdutos.isEmpty()) {
             throw new SemProdutosException("Me desculpe, mas na tentativa de pegar produtos da lista, esta totalmente vazia!");
         }
